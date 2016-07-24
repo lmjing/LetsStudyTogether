@@ -1,6 +1,7 @@
 # Let's Study Together
 소프트웨어 마에스트로 첫번째 과제를 위한 android application입니다.
 
+#안드로이드
 
 ## 환경 ##
 안드로이드 스튜디오 사용
@@ -89,3 +90,125 @@
        스플래쉬 화면을 표시하고 어플을 켤때, 최초 어플을 켰을때의 시간을 입력받는 activity입니다.
 + **ViewPagerAdapter**
        메인화면의 설명 사진 두개를 2초에 한번씩 옮겨 보여주도록 합니다.
+
+#서버(Soma 폴더)
+
+=====
+## 서버, 환경설정 ##
+AWS - EC2,RDS 사용
+
++ EC2 - NODE.JS, NPM, EXPRESS
++ RDS - MYSQL
+
+## DB테이블 및 Rest API
+**User**
+어플 사용자의 정보
+
+    +-------------+--------------+------+-----+-------------------+-------+
+    | Field       | Type         | Null | Key | Default           | Extra |
+    +-------------+--------------+------+-----+-------------------+-------+
+    | id          | varchar(20)  | NO   | PRI | NULL              |       |
+    | name        | varchar(45)  | NO   |     | NULL              |       |
+    | email       | varchar(50)  | NO   |     | NULL              |       |
+    | phone       | varchar(12)  | NO   |     | NULL              |       |
+    | registerid  | varchar(300) | NO   |     | NULL              |       |
+    | jointime    | datetime     | YES  |     | CURRENT_TIMESTAMP |       |
+    | installtime | datetime     | YES  |     | NULL              |       |
+    | playtime    | datetime     | YES  |     | NULL              |       |
+    | endtime     | datetime     | YES  |     | NULL              |       |
+    +-------------+--------------+------+-----+-------------------+-------+
+
+URI path|method|설명
+----|----|----
+/user|POST|회원가입-새로운 USER생성
+/user/:id|GET|특정 회원의 정보를 반환
+/user/:id|DELETE|회원탈퇴 - 특정 회원을 삭제
+/user|PUT|정보수정 - 특정 회원의 정보를 수정
+/user/time|PUT|시간 저장 - 특정 회원의 가입,어플을 켜고 끈 시간 저장
+
+**Study**
+스터디 모집글의 정보
+
+    +------------------+---------------+------+-----+----------------------------------------------+----------------+
+    | Field            | Type          | Null | Key | Default                                      | Extra          |
+    +------------------+---------------+------+-----+----------------------------------------------+----------------+
+    | studyid          | int(11)       | NO   | UNI | NULL                                         | auto_increment |
+    | writer           | varchar(20)   | NO   | PRI | NULL                                         |                |
+    | title            | varchar(50)   | NO   |     | NULL                                         |                |
+    | studytype        | varchar(50)   | NO   | PRI | NULL                                         |                |
+    | member           | int(11)       | YES  |     | NULL                                         |                |
+    | location         | varchar(100)  | NO   |     | NULL                                         |                |
+    | day              | varchar(50)   | YES  |     | NULL                                         |                |
+    | description      | varchar(1000) | YES  |     | 커리큘럼이 입력되지 않았습니다               |                |
+    | created_datetime | datetime      | YES  |     | CURRENT_TIMESTAMP                            |                |
+    | startdate        | date          | YES  |     | NULL                                         |                |
+    | enddate          | date          | YES  |     | NULL                                         |                |
+    | starttime        | time          | YES  |     | NULL                                         |                |
+    | endtime          | time          | YES  |     | NULL                                         |                |
+    | end              | int(11)       | NO   | PRI | 0                                            |                |
+    | phone            | varchar(13)   | NO   |     | NULL                                         |                |
+    | email            | varchar(50)   | NO   |     | NULL                                         |                |
+    +------------------+---------------+------+-----+----------------------------------------------+----------------+
+
+URI path|method|설명
+----|----|----
+/study/:name|POST|스터디 등록 - 새로운 스터디 생성하고 게시자를 참여자에 등록
+/study|GET|모집중인 스터디(end = 0) 목록을 반환
+/study/:id|GET|특정 스터디를 반환
+/study|PUT|스터디 마감 - end의 값을 1로 수정
+/study/:id|DELETE|스터디 삭제 - 특정 스터디를 삭제
+
+**Comment**
+댓글의 정보
+
+    +------------+--------------+------+-----+-------------------+-------+
+    | Field      | Type         | Null | Key | Default           | Extra |
+    +------------+--------------+------+-----+-------------------+-------+
+    | id         | varchar(20)  | NO   | MUL | NULL              |       |
+    | studyid    | int(11)      | NO   | PRI | NULL              |       |
+    | contents   | varchar(100) | YES  |     | NULL              |       |
+    | write_time | datetime     | NO   | PRI | CURRENT_TIMESTAMP |       |
+    | name       | varchar(45)  | NO   |     | NULL              |       |
+    +------------+--------------+------+-----+-------------------+-------+
+
+
+URI path|method|설명
+----|----|----
+/comment|POST|댓글 등록 - 새로운 댓글 생성
+/comment/:id|GET|특정 스터디의 댓글 목록을 반환
+/comment|PUT|댓글 수정 - 특정 댓글의 내용 수정
+/comment/:studyid/:writetime|DELETE|댓글 삭제 - 특정 댓글을 삭제
+
+**Participant**
+특정 스터디의 참여자들의 정보
+
+    +--------+-------------+------+-----+---------+-------+
+    | Field  | Type        | Null | Key | Default | Extra |
+    +--------+-------------+------+-----+---------+-------+
+    | study  | int(11)     | NO   | PRI | NULL    |       |
+    | name   | varchar(45) | NO   |     | NULL    |       |
+    | userid | varchar(20) | NO   | PRI | NULL    |       |
+    +--------+-------------+------+-----+---------+-------+
+
+URI path|method|설명
+----|----|----
+/participate/:su1/:su2|POST|특정 스터디 참여 - 참여자 생성
+/participate/:id|GET|특정 스터디의 참여자 목록을 반환
+/participate/:userid/:id|GET|특정 스터디의 특정 참여자를 반환
+/participate/:id/:userid|DELETE|특정 스터디 불참 - 참여자 삭제
+
+**Participant**
+스터디 등록시 지역 설정을 위한 지역정보
+
+    +-------+-------------+------+-----+---------+-------+
+    | Field | Type        | Null | Key | Default | Extra |
+    +-------+-------------+------+-----+---------+-------+
+    | city  | varchar(50) | NO   | PRI | NULL    |       |
+    | gu    | varchar(50) | NO   | PRI | NULL    |       |
+    +-------+-------------+------+-----+---------+-------+
+
+URI path|method|설명
+----|----|----
+/region/:id|GET|도시 목록을 중복삭제 처리하여 반환
+/region:city/:su2|GET|특정 도시의 군,구들의 목록을 반환
+
