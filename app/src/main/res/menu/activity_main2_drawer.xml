@@ -13,4 +13,9 @@
                 android:title="탈퇴하기" />
     </group>
 
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_invite" android:icon="@drawable/plus"
+            android:title="친구 초대" />
+    </group>
+
 </menu>
