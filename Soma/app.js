@@ -9,7 +9,6 @@ var user = require('./routes/user');
 var study = require('./routes/study');
 var comment = require('./routes/comment');
 var participate = require('./routes/participate');
-var gcm_provider = require('./routes/gcm-provider');
 var region = require('./routes/region');
 
 var app = express();
@@ -30,7 +29,6 @@ app.use('/user',user);
 app.use('/study',study);
 app.use('/comment',comment);
 app.use('/participate',participate);
-app.use('/Push',gcm_provider);
 app.use('/region',region);
 
 // catch 404 and forward to error handler
