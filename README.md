@@ -212,7 +212,7 @@ URI path|method|설명
 /region/:id|GET|도시 목록을 중복삭제 처리하여 반환
 /region:city/:su2|GET|특정 도시의 군,구들의 목록을 반환
 
-# Database
+# 데이터베이스 (계정)
 
 user : 'user', 
 password : '201301473', 
