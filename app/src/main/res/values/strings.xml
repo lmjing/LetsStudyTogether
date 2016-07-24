@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Let`s Study Together</string>
+    <string name="facebook_app_id">1291600847536400</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="spinner1">스터디 상위분류</string>
+    <string name="spinner2">스터디 하위분류</string>
+    <string name="spinner3">지역 상위분류</string>
+    <string name="spinner4">지역 하위분류</string>
+
+    <string name="registering_message_ready">InstanceID 토큰 가져오기</string>
+    <string name="registering_message_generating">InstanceID 토큰 생성중...</string>
+    <string name="registering_message_complete">완료!</string>
+    <string-array name="studytype1">
+        <item >스터디 상위분류</item>
+        <item >프로그래밍</item>
+        <item >어학</item>
+        <item >취업</item>
+        <item >금융</item>
+        <item >기타</item>
+    </string-array>
+    <string-array name="studytype2">
+        <item >스터디 하위분류</item>
+    </string-array>
+    <string-array name="기타">
+        <item >기타</item>
+    </string-array>
+    <string-array name="프로그래밍">
+        <item >JAVA</item>
+        <item >C/C++</item>
+        <item >Python</item>
+        <item >Ruby</item>
+        <item >Android</item>
+        <item >Objective-C</item>
+        <item >Linux</item>
+        <item >알고리즘</item>
+        <item >웹프로그래밍</item>
+        <item >게임프로그래밍</item>
+        <item >시스템프로그래밍</item>
+        <item >임베디드</item>
+        <item >데이터베이스</item>
+        <item >빅데이터</item>
+        <item >소프트웨어공학</item>
+        <item >기타</item>
+    </string-array>
+    <string-array name="어학">
+        <item >영어</item>
+        <item >일본어</item>
+        <item >중국어</item>
+        <item >스페인어</item>
+        <item >독일어</item>
+        <item >프랑스어</item>
+        <item >아랍어</item>
+        <item >러시아어</item>
+        <item >이탈리아어</item>
+        <item >기타</item>
+    </string-array>
+    <string-array name="취업">
+        <item >토익</item>
+        <item >토익스피킹</item>
+        <item >토플</item>
+        <item >오픽</item>
+        <item >텝스</item>
+        <item >인적성</item>
+        <item >면접</item>
+        <item >자기소개서</item>
+        <item >대외활동</item>
+        <item >공모전</item>
+        <item >기타</item>
+    </string-array>
+    <string-array name="금융">
+        <item >주식</item>
+        <item >부동산</item>
+        <item >경매</item>
+        <item >제태크</item>
+        <item >경제</item>
+        <item >회계</item>
+        <item >기타</item>
+    </string-array>
+
+    <string-array name="location2">
+    <item >지역 하위분류</item>
+    </string-array>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash">
+
+    <FrameLayout
+        android:id="@+id/title"
+        android:layout_width="280dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/splash_square">
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Let`s Study\nTogether"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="45dp"/>
+    </FrameLayout>
+    <TextView
+        android:layout_below="@+id/title"
+        android:id="@+id/des"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="스터디를 새로운 사람들과 함께"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"/>
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/btn_facebook"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp" />
+
+</RelativeLayout>

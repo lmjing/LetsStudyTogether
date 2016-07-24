@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#f2f2f2"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:layout_height="100dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="NODE.JS 스터디"
+                    android:maxLength="14"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:id="@+id/textTitle_item" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="11dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/location"
+                        android:id="@+id/imageView" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="11dp"
+                        android:layout_marginTop="-4px"
+                        android:text="서울"
+                        android:gravity="center_vertical"
+                        android:textColor="#000"
+                        android:id="@+id/textLocation_item" />
+                </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="11dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/people"
+                    android:id="@+id/imageView2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="11dp"
+                    android:layout_marginTop="-4px"
+                    android:text="10명"
+                    android:gravity="center_vertical"
+                    android:textColor="#000"
+                    android:id="@+id/textMember_item" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="11dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/type"
+                    android:id="@+id/imageView3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="11dp"
+                    android:text="프로그래밍-JAVA"
+                    android:gravity="center_vertical"
+                    android:textColor="#000"
+                    android:id="@+id/textType_item" />
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/end_thunder"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/main_end_alpha"
+        android:visibility="invisible"
+        android:layout_height="110dp"></ImageView>
+</RelativeLayout>

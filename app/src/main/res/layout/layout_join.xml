@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".JoinActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="146dp"
+                android:layout_height="119dp"
+                android:src="@drawable/applogo"    />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="가입을 위한 추가 정보를 입력해주세요."/>
+
+
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="208dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@drawable/join_border"/>
+
+
+
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/input_email"
+                android:layout_width="208dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:hint="abcd@gmail.com"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/join_border"/>
+
+
+            <LinearLayout
+                android:layout_width="208dp"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp" >
+                <LinearLayout
+                    android:layout_width="63dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="9dp"
+                    android:background="@drawable/join_border">
+
+                    <EditText
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:id="@+id/input_phone1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="010"
+                        android:background="@null"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="63dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="9dp"
+                    android:background="@drawable/join_border"                    >
+
+                    <EditText
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:id="@+id/input_phone2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="1234"
+                        android:background="@null"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="63dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/join_border">
+
+                    <EditText
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:id="@+id/input_phone3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="5678"
+                        android:background="@null"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="34dp">
+        <Button
+            android:id="@+id/btn_join"
+            android:layout_width="141dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="가입"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_push_style"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
