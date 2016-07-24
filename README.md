@@ -212,3 +212,12 @@ URI path|method|설명
 /region/:id|GET|도시 목록을 중복삭제 처리하여 반환
 /region:city/:su2|GET|특정 도시의 군,구들의 목록을 반환
 
+# Database
+
+user : 'user', 
+password : '201301473', 
+database : 'soma', 
+host : 'aws-rds-mysql.czvbtapsvpjv.us-west-2.rds.amazonaws.com'
+port : 3306
+
+
