@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "795783804094",
+    "project_id": "soma-1376"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795783804094:android:b3d5fcc53ce2b812",
+        "android_client_info": {
+          "package_name": "soma.net.letsstudytogether"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqNF90kE0vwke6TNUZ5Mc-9FeNRVX-UNU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

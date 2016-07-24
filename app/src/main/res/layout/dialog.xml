@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="180dp"
+    android:background="@drawable/border"
+    android:padding="20dp">
+<TextView
+    android:id="@+id/txt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:textColor="#000000"
+    android:textSize="20sp"
+    android:layout_marginBottom="10dp"
+    android:text="스터디 모집을 마감하세요!"/>
+
+    <TextView
+        android:id="@+id/des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:layout_below="@+id/txt"
+        android:gravity="center"
+        android:text="설정하신 인원만큼 가득 찼어요\n스터디 모집을 마감해주세요"/>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_cancel"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="취소"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/btn_push_style"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_move"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="이동"
+        android:textColor="#FFFFFF"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_push_style"
+        android:layout_marginTop="10dp"/>
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/splash">
+    <FrameLayout
+        android:layout_width="280dp"
+        android:layout_height="150dp"
+        android:background="@drawable/splash_square">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Let`s Study\nTogether"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="45dp"/>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/des"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="스터디를 새로운 사람들과 함께"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"/>
+</LinearLayout>

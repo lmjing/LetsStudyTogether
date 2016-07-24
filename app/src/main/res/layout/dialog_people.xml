@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="260dp"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#333333">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="현재 참여 인원"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/dialog_people_logo"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="11dp"
+            android:id="@+id/text_cnt"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:text="0"
+            android:layout_toRightOf="@+id/imageView"
+            />
+
+    </RelativeLayout>
+
+        <GridView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="202dp"
+            android:numColumns="3"
+            android:gravity="center"
+            android:id="@+id/gridView"
+            android:background="#ffffff"/>
+
+
+</LinearLayout>

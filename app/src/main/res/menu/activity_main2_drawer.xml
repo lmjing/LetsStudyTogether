@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_edit" android:icon="@drawable/mypage_icon_edit"
+            android:title="내 정보 변경" />
+    </group>
+
+    <group android:checkableBehavior="single">
+            <item android:id="@+id/nav_logout" android:icon="@drawable/mypage_icon_logout"
+                android:title="로그아웃" />
+            <item android:id="@+id/nav_delete" android:icon="@drawable/mypage_icon_delete"
+                android:title="탈퇴하기" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_invite" android:icon="@drawable/plus"
+            android:title="친구 초대" />
+    </group>
+
+</menu>
