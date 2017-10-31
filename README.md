@@ -213,11 +213,5 @@ URI path|method|설명
 /region:city/:su2|GET|특정 도시의 군,구들의 목록을 반환
 
 # 데이터베이스 (계정)
-
-user : 'user', 
-password : '201301473', 
-database : 'soma', 
-host : 'aws-rds-mysql.czvbtapsvpjv.us-west-2.rds.amazonaws.com'
-port : 3306
-
+당시 미흡한 관리로 서버주소 등이 기재되어 있습니다. 현재 서버는 비활성화되어있는 상태입니다.
 
